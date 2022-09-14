@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+   
+<h1>Calculadora de 30% da sala</h1>
+
+<br>
+<label>Quantidade de alunos</label>
+<input type="number" id="alunos"></input>
+<br>
+<br>
+
+
+<br>
+<input (type="text" value="" placeholder="Resultado") type ="number" id="resultado"></input> <button type="button" onclick="calcular()">Calcular</button>
+
+<script type="text/javascript">
+    function calcular(){
+        let alunos = document.getElementById('alunos').value
+
+        let resultado = parseFloat(alunos) * 30 / 100
+
+        document.getElementById('resultado').value = resultado
+        //deixar o type text e o type number separados com () para não se confundirem.
+        //os nº em js não precisam do parseFloat.
+    }
+</script>
+</body>
+</html>

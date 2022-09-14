@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+   
+<h1>Calculadora conversora de Celsius para Fahrenheit</h1>
+ 
+<br>
+<label>Celsius</label>
+<input type="number" id="celsius"></input>
+<br>
+<br>
+<br>
+<input (type="text" value="" placeholder="Resultado") type ="number" id="resultado"></input> <button type="button" onclick="calcular()">Calcular</button>
+ 
+<script type="text/javascript">
+    function calcular(){
+        let celsius = document.getElementById('celsius').value
+ 
+        let resultado = parseFloat(celsius) * 1.8 + 32
+ 
+        document.getElementById('resultado').value = resultado
+    }
+</script>
+</body>
+</html>

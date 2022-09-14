@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+   
+<h1>Calculadora da média dos alunos</h1>
+ 
+<br>
+<label>Aluno 1</label>
+<input type="number" id="aluno1"></input>
+<br>
+<br>
+<label>Aluno 2</label>
+<input type="number" id="aluno2"></input>
+<br>
+<br>
+<label>Aluno 3</label>
+<input type="number" id="aluno3"></input>
+<br>
+ 
+<br>
+<br>
+<button type="button" onclick="calcular()">Calcular</button>
+ 
+<br>
+<label>Resultado</label>
+<br>
+<input type ="number" id="resultado"></input>
+ 
+<script type="text/javascript">
+    function calcular(){
+        let aluno1 = document.getElementById('aluno1').value
+        let aluno2 = document.getElementById('aluno2').value
+        let aluno3 = document.getElementById('aluno3').value
+ 
+        let resultado = parseFloat(aluno1) + parseFloat(aluno2) + parseFloat(aluno3) / parseFloat(3)
+ 
+        document.getElementById('resultado').value = resultado
+        alert('Cálculo realizado com sucesso!')
+    }
+</script>
+</body>
+</html>
