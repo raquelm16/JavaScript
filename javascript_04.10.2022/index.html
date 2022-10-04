@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercícios JS</title>
+</head>
+<body>
+
+    <h1>Exercícios JS</h1>
+
+    <h3>Atividade 01</h3>
+
+    <button id="ativ01" onclick="rodarAtiv01()">Rodar código</button>
+
+    <h3>Atividade 02</h3>
+    <button id="ativ02" onclick="rodarAtiv02()">Rodar código</button>
+
+    <h3>Atividade 03</h3>
+
+    <button id="ativ03" onclick="rodarAtiv03()">Rodar código</button>
+
+    <h3>Atividade 04</h3>
+    <button id="ativ04" onclick="rodarAtiv04()">Rodar código</button>
+
+    <h3>Atividade 05</h3>
+    <button id="ativ05" onclick="rodarAtiv05()">Rodar código</button>
+    
+<script>
+//ATIVIDADE 01
+let ativ01 = document.querySelector('.ativ01');
+ativ01.addEventListener('click', rodarAtiv01);
+
+function rodarAtiv01(){
+    var nota1 = parseFloat(prompt("Qual a sua primeira nota?"));//parseFloat passa o nº em string para inteiro
+    var nota2 = parseFloat(prompt("E qual a sua segunda nota?"));
+    let media = ((nota1+nota2)/2);
+    console.log("Sua média é: ", media);
+
+    if (media>=6.0) {
+        console.log("Parabéns, você passou!");
+    } else {
+        var exame = parseFloat(prompt("Lamento, você não passou. Por favor, informe a nova nota do seu exame:"));
+        let novaMedia = ((exame+media)/2);
+        console.log("Sua nova média é: ", novaMedia);
+
+        if (novaMedia>=6.0) {
+            console.log("Parábens, você passou!");
+        } else {
+            console.log("Lamento, mas você reprovou :(");
+        }
+    }
+}
+
+/*ATIVIDADE 02*/
+let ativ02 = document.querySelector('.ativ02');
+    ativ02.addEventListener('click', rodarAtiv02);
+
+    function rodarAtiv02(){
+    var number = prompt("Por favor, informe um número inteiro.")
+    
+    /*if (number = 0) {
+        console.log("O número é igual a zero.");
+    } if(number < 0) {
+        console.log("O número é positivo.");
+    } else {
+        console.log("O número é negativo.");
+    }*/
+
+    if (number == 0){
+        console.log("O número é igual a zero.");
+    } else {
+        if (number > 0) {
+            console.log("O número é positivo.");
+        } else {
+            console.log("O número é negativo.");
+        }
+    }
+}
+
+//ATIVIDADE 03
+    let ativ03 = document.querySelector('.ativ03');
+    ativ03.addEventListener('click', rodarAtiv03);
+
+    function rodarAtiv03(){
+        var number1 = parseFloat(prompt("Por favor, digite um número."))
+        var number2 = parseFloat(prompt("Digite mais um número, que seja diferente do primeiro."))
+        
+        if (number1 > number2) {
+            console.log("O maior número é: ", number1);
+        } else {
+            console.log("O maior número é: ", number2);
+        }
+    }
+
+//ATIVIDADE 04
+    let ativ04 = document.querySelector('.ativ04');
+    ativ04.addEventListener('click', rodarAtiv04);
+
+    function rodarAtiv04(){
+        var sexo = prompt("Por favor, digite o seu sexo: ")
+
+        if (sexo == "feminino") {
+            console.log("Você é uma mulher!");
+        } else if (sexo == "masculino") {
+            console.log("Você é um homem!");
+        } else {
+            console.log("Sexo inválido.");
+        }
+    }
+
+//ATIVIDADE 05
+    let ativ05 = document.querySelector('.ativ05');
+    ativ05.addEventListener('click', rodarAtiv05);
+
+    function rodarAtiv05(){
+        var idade = parseFloat(prompt("Por favor, insira sua idade."))
+
+        if (idade <= 10){
+            console.log("Infantil");
+        } else if ( idade <= 13){
+            console.log("Infanto Juvenil");
+        } else if (idade <= 18){
+            console.log("Juvenil");
+        } else if (idade > 18){
+            console.log("Adulto");
+        }
+    }
+
+</script>
+
+
+<!--SAÍDAS
+console.log("saída 1, melhor de usar")
+alert("saída 2")
+document.write("saída 3")
+
+ENTRADAS
+let nome = 'Raquel' //texto
+let numero = 3 //inteiro
+let pi = 3.14 //real
+let podeSair = true //booleano (true ou false)
+Concatenação: 2+2 = 22-->
+
+</body>
+</html>
