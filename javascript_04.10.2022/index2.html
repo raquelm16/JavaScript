@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios 2</title>
+</head>
+<body>
+
+    <h1>Exercícios JS (2)</h1>
+    
+    <h3>Atividade 01</h3>
+    <p>Você deve fazer um programa que leia um valor qualquer e apresente uma mensagem dizendo em qual dos <br>
+        seguintes intervalos ([0,25], (25,50], (50,75], (75,100]) este valor se encontra. <br>
+        Obviamente se o valor não estiver em nenhum destes intervalos, deverá ser impressa a mensagem “Fora de intervalo”. <br>
+        O símbolo ( representa "maior que". Por exemplo: [0,25] indica valores entre 0 e 25.0000, inclusive eles. <br>
+        (25,50] indica valores maiores que 25 Ex: 25.00001 até o valor 50.0000000. <br>
+    </p>
+    <button id="a1">Rodar codigo</button>
+    <br><br>
+    <h3>Atividade 02</h3>
+    <p>Leia 2 valores inteiros (A e B). Após, o programa deve mostrar uma mensagem "São Multiplos" ou "Nao sao Multiplos", <br>
+        indicando se os valores lidos são múltiplos entre si.
+    </p>
+    <button id="a2">Rodar codigo</button>
+    <br><br>
+    <h3>Atividade 03</h3>
+    <p>
+        A empresa ABC resolveu conceder um aumento de salários a seus funcionários de acordo com a tabela. <br>
+Leia o salário do funcionário e calcule e mostre o novo salário, bem como o valor de reajuste <br>
+ganho e o índice reajustado, em percentual.
+    </p>
+    <button id="a3">Rodar codigo</button>
+    <br><br>
+    <h3>Atividade 04</h3>
+    <p>
+        Leia a hora inicial e a hora final de um jogo. A seguir calcule a duração do jogo, sabendo que o mesmo pode começar em <br>
+um dia e terminar em outro, tendo uma duração mínima de 1 hora e máxima de 24 horas. <br>
+    </p>
+    <button id="a4">Rodar codigo</button>
+    <br><br>
+    <h3>Atividade 05</h3>
+    <p>Neste problema você deverá ler 3 palavras que definem o tipo de animal possível segundo o esquema abaixo, da esquerda <br>
+        para a direita. Em seguida conclua qual dos animais seguintes foi escolhido, através das três palavras fornecidas. <br><br>
+        <img src="./ativ05.png" alt="imagem">
+    </p>
+    <button id="a5">Rodar codigo</button>
+    <br><br>
+
+    <script>
+    //ATIVIDADE 01
+    let a1 = document.querySelector('#a1');
+    a1.addEventListener('click', rodarA1);
+
+    function rodarA1(){
+        var num = parseFloat(prompt("Por favor, informe um numero: "))
+
+        if(num <= 25){
+            console.log("Seu numero esta no intervalo 0-25.");
+        } else if(num <= 50){
+            console.log("Seu numero esta no intervalo de 25-50.");
+        } else if(num<=75){
+            console.log("Seu numero esta no intervalo de 50-75.");
+        } else if (num<=100){
+            console.log("Seu numero esta no intervalo de 75-100.");
+        } else {
+            console.log("Fora de intervalo.");
+        }
+    }
+
+    //ATIVIDADE 02
+    let a2 = document.querySelector('#a2');
+    a2.addEventListener('click', rodarA2);
+
+    function rodarA2(){
+        var num1 = parseFloat(prompt("Digite um numero:"))
+        var num2 = parseFloat(prompt("Digite mais um numero:"))
+        resto = num1%num2
+
+        if(resto==0){
+            console.log("O ", num1, " é multiplo de ", num2, ".");
+        } else {
+            console.log("O ", num1, " não é multiplo de ", num2, ".");
+        }
+    }
+
+    //ATIVIDADE 03
+    let a3 = document.querySelector('#a3')
+    a3.addEventListener('click', rodarA3)
+
+    function rodarA3(){
+        var sal = parseFloat(prompt("Por favor, digite o seu salario:"))
+
+        if(sal<=400.00){
+            console.log("Voce recebera um reajuste de 15%. Seu salario reajustado é R$", sal+(sal*0.15));
+        } else if (sal <= 800.00){
+            console.log("Voce recebera um reajuste de 12%. Seu salario reajustado é R$", sal+(sal*0.12));
+        } else if (sal<=1200.00){
+            console.log("Voce recebera um reajuste de 10%. Seu salario reajustado é R$", sal+(sal*0.10));
+        } else if (sal<=2000.00){
+            console.log("Voce recebera um reajuste de 7%. Seu salario reajustado é R$", sal+(sal*0.07));
+        } else if (sal>2000.00){
+            console.log("Voce recebera um reajuste de 4%. Seu salario reajustado é R$", sal+(sal*0.04));
+        } else {
+            console.log("Por favor, digite um numero valido.");
+        }
+    }
+
+    //ATIVIDADE 04
+    let a4 = document.querySelector('#a4')
+    a4.addEventListener('click', rodarA4)
+
+    function rodarA4(){
+    var horaInicio = Number(prompt("Informe a hora que começou o jogo:"))
+    var horaFim = Number(prompt("Informe a hora que finalizou o jogo:"))
+
+    if (horaInicio>=horaFim){
+        var duracao = 24-horaInicio+horaFim
+        console.log("O jogo durou ",duracao," horas.");
+    } else {
+        var duracao = horaFim-horaInicio
+        console.log("O jogo durou ",duracao, " horas.");
+    }
+}
+
+    //ATIVIDADE 05
+    let a5 = document.querySelector('#a5')
+    a5.addEventListener('click', rodarA5)
+
+    function rodarA5(){
+        var ossos = prompt("Informe se o animal é vertebrado ou invertebrado: ")
+
+        if(ossos=="vertebrado"){//vertebrado
+            var tipo = prompt("Informe se o animal é ave ou mamífero:")
+            if(tipo=="ave"){//ave
+                var alimento = prompt("Informe se o animal é carnívoro ou onívoro: ")
+                if(alimento=="carnívoro"){
+                    console.log("O animal é águia");
+            } else {//onívoro
+                console.log("O animal é pomba");
+            }
+        } else {//mamífero
+            var alimento = prompt("Informe se o animal é herbívoro ou onívoro: ")
+            if(alimento=="herbívoro"){
+                console.log("O animal é vaca.");
+            } else {//onívoro
+                console.log("O animal é homem.");
+            }
+        }
+
+        } else {//invertebrado
+            var tipo = prompt("Informe se o animal é inseto ou anelídeo: ")
+            if(tipo=="inseto"){//inseto
+                var alimento = prompt("Informe se o animal é herbívoro ou hematófago: ")
+                if(alimento=="herbívoro"){
+                    console.log("O animal é lagarta.");
+                } else {//hematófago
+                    console.log("O animal é pulga");
+                }
+            } else {//anelídeo
+                var alimento = prompt("Informe se o animal é onívoro ou hematófago: ")
+                if(alimento=="onívoro"){
+                    console.log("O animal é minhoca");
+                } else {//hematófago
+                    console.log("O animal é sanguessuga");
+                }
+            }
+        }
+    }
+
+    </script>
+
+    <!--
+        *Aspas simples transforma em valor.
+        *o 'else' ignora todos os 'if's e le o ultimo deles. Por isso usar 'else if'.
+        *'parseFloat' pode substituir por 'Number' nesses exercicios.
+    -->
+</body>
+</html>
