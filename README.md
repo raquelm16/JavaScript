@@ -7,6 +7,7 @@
 <li> Array, For (10/05/2022 - 2º tri) 
 <li> Filter, Map, Reduce (09/08/2022 - 2º tri)
 <li> Estrutura de Decisão (04/10/2022 - 3º tri)
+<li> Estrutura de Repetição (25/10/2022 - 3º tri)
 <br>
 <br>
 <p align="center">Provas do Senai</p>
