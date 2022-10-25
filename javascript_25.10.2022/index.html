@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+<body>
+    <h1>Estrutura de Repetiçao</h1>
+
+    <h3>Atividade 01</h3>
+    <button id="a1">Rodar codigo</button>
+<br><br>
+    <h3>Atividade 02</h3>
+    <button id="a2">Rodar codigo</button>
+    <br><br>
+    <h3>Atividade 03</h3>
+    <button id="a3">Rodar codigo</button>
+    <br><br>
+
+    <script>
+        //--- ATIVIDADE 01 ---
+        let a1 = document.querySelector('#a1')
+        a1.addEventListener('click', rodarA1)
+
+        function rodarA1(){
+            for(var i=1;i<=3;i++){
+                var n1 = parseFloat(prompt("Por favor, informe a nota 1 do aluno(a):"))
+                var n2 = parseFloat(prompt("Informe a nota 2 do aluno(a):"))
+                var m = (n1+n2)/2//usar var, porque pode ser reescrito.
+                console.log(m);
+            }
+        }
+
+        //--- ATIVIDADE 02 ---
+        let a2 = document.querySelector('#a2')
+        a2.addEventListener('click', rodarA2)
+
+        function rodarA2(){
+            let cem = 0
+
+            for(var i=1;i<=5;i++){
+            var qtd = parseFloat(prompt("Digite a quantidade:"))
+            var precUni = parseFloat(prompt("Digite o preço unitario:"))
+            var custoTotal = qtd*precUni
+            if(custoTotal>100){
+                cem++
+            }
+                console.log("O valor gasto do produto "+i+" eh R$",custoTotal);
+            }
+            console.log("A quantidade de produtos maior que 100 eh ", cem);
+        }
+
+        //--- ATIVIDADE 03 ---
+        let a3 = document.querySelector('#a3')
+        a3.addEventListener('click', rodarA3)
+
+        function rodarA3(){
+            var num, dobro, neg=0 //eh lido dentro e fora do for
+            for(var i=1;i<=10;i++){
+                num = parseInt(prompt("Digite um numero:"))
+                if(num>0){
+                    dobro = 2*num
+                    console.log("O numero digitado foi ",num," e o seu dobro eh ",dobro);
+                } else {
+                    neg++
+                }
+            }
+            console.log("A quantidade de numeros negativos eh ",neg);
+    }
+
+
+    </script>
+
+    <!--Estrutura de Repetiçao
+    *--- EXEMPLO ---
+    Tenho que pagar 10 reais. Meu cartao vale 2,50.
+    Vou passar 4 vezes o cartao (for). Somar de 2,50.
+
+    *--- SINTAXE ---
+    for('inicio';'parada';'continuidade'){
+
+    }
+    'inicio' -> var i=1
+    'parada' -> i<=5
+    'continuidade' -> i=i+1 ou i=i++
+
+
+    --- DESAFIO CSS ---
+    criar mascote, identidade e logo para o novo geekie
+    Exemplos: oktoplos, facebook
+    login - email institucional (senai)
+    senha
+    botao de entrar, cadastrar, recuperar senha (cada um destes leva a uma pagina)
+    -->
+</body>
+</html>
