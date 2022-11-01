@@ -17,6 +17,21 @@
     <h3>Atividade 03</h3>
     <button id="a3">Rodar codigo</button>
     <br><br>
+    <h3>Atividade 04</h3>
+    <button id="a4">Rodar codigo</button>
+    <br><br>
+    <h3>Atividade 05</h3>
+    <button id="a5">Rodar codigo</button>
+<br><br>
+    <h3>Atividade 06</h3>
+    <button id="a6">Rodar codigo</button>
+    <br><br>
+    <h3>Atividade 07</h3>
+    <button id="a7">Rodar codigo</button>
+    <br><br>
+    <h3>Atividade 08</h3>
+    <button id="a8">Rodar codigo</button>
+    <br><br>
 
     <script>
         //--- ATIVIDADE 01 ---
@@ -56,19 +71,97 @@
         a3.addEventListener('click', rodarA3)
 
         function rodarA3(){
-            var num, dobro, neg=0 //eh lido dentro e fora do for
+            var num, dobro, neg=0 //é lido dentro e fora do for
             for(var i=1;i<=10;i++){
                 num = parseInt(prompt("Digite um numero:"))
                 if(num>0){
                     dobro = 2*num
-                    console.log("O numero digitado foi ",num," e o seu dobro eh ",dobro);
+                    console.log("O numero digitado foi ",num," e o seu dobro é ",dobro);
                 } else {
                     neg++
                 }
             }
-            console.log("A quantidade de numeros negativos eh ",neg);
+            console.log("A quantidade de numeros negativos é ",neg);
     }
 
+
+      //---ATIVIDADE 04---
+      let a4 = document.querySelector('#a4')
+        a4.addEventListener('click', rodarA4)
+
+        function rodarA4(){
+            var custo, venda, tipo, lucro, quant=0
+
+            for(var i=1;i<3;i++){
+              var custo = parseFloat(prompt("Digite o custo do produto:"))
+              var venda = parseFloat(prompt("Digite o preço da venda:"))
+              var tipo = prompt("Digite o tipo do produto. V para vestuário ou C para calçados:")
+
+              lucro = (venda-custo)/*O lucro é para cada produto. Por isso está dentro do for. Ao contrário da quant, onde o
+              novo valor vai se sobrepor ao antigo. Se era 10, passou a ser 20.*/
+              console.log("Lucro: R$"+lucro)
+
+              if(tipo == 'C' ||/*ou*/ tipo == 'c'){
+                  quant++
+              }
+              console.log("Quantidade de calçados é: "+quant);
+            }       
+        }
+
+        //---ATIVIDADE 05---
+        let a5 = document.querySelector('#a5')
+        a5.addEventListener('click', rodarA5)
+
+        function rodarA5(){
+            for(let i=50;i<151;i++){
+                console.log(i);
+            }
+        }
+
+        //---ATIVIDADE 06---
+        let a6 = document.querySelector('#a6')
+        a6.addEventListener('click', rodarA6)
+
+        function rodarA6(){
+            for(var i=10;i<101;i=i+2/*i+=2*/){
+                console.log(i);
+            }
+        }
+
+        //---ATIVIDADE 07---
+        let a7 = document.querySelector('#a7')
+        a7.addEventListener('click', rodarA7)
+
+        function rodarA7(){
+            let idade,proced,capital=0,maioridade=0, entrevistados=3
+            for(var i=1; i<entrevistados; i++){
+                idade = parseInt(prompt("Digite a idade:"))
+                proced = parseInt(prompt("0 - Capital \n1 - Interior \n2- Outro estado"))
+
+                if(proced==0){
+                    capital++
+                }
+
+                if(idade>=18){
+                    maioridade++
+                }
+            } let porCem = (maioridade*100)/entrevistados
+            console.log(capital+" pessoas vem da capital.");            
+            console.log("Porcentagem de pessoas maiores de idade é "+porCem);
+        }
+
+        //---ATIVIDADE 08---
+        let a8 = document.querySelector('#a8')
+        a8.addEventListener('click', rodarA8)
+
+        function rodarA8(){
+            
+            let num = parseInt(prompt("Digite um número:"))
+            for(var i=1;i<11;i++){
+                res= num*i
+                console.log(num+" x "+i+" = "+res);
+            }
+        }
 
     </script>
 
@@ -92,6 +185,12 @@
     login - email institucional (senai)
     senha
     botao de entrar, cadastrar, recuperar senha (cada um destes leva a uma pagina)
+
+
+    -Home prof/aluno(acessado atraves do login)
+    prof- cadastro de avaliação (obj, 5 opções)
+    informar qual area da avaliação, escolher quantas questões disponíveis.
+    tela de cadastros de questões.
     -->
 </body>
 </html>
