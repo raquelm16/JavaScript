@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//MINHA PROVA
+for(i=0;i<50;i++) {
+    var quants
+    var quantf
+    var s = prompt("Qual o seu sexo? Digite 0 para homem e 1 para mulher.");
+    var f = prompt("Quantos filmes você assistiu no primeiro semestre de 2022?");
+
+    if(s=='1'){
+        quants = i+1 //ou quants++
+    } else {
+        quants = 0
+    }
+    
+    if (f>10){
+        quantf = i+1
+    } else {
+        quantf=0
+    }
+
+    console.log("Mulheres entrevistadas: "+ quants + "\nPessoas que assistiram + de 10 filmes: " + quantf + "\nPorcentagem de mulheres: " + ((quants*100)/50));
+}
+
+//PROVA CORRIGIDA
+/*
+- tinha que ter feito um sorteio: 'var sexo = Math.floor(Math.random() * 2)'
+- se i=0, i<50. Se i=1, i=51.
+- console ajuda a validar a informação
+- se não existe relação entre os filmes e o genero, não precisa de else if,
+pode fazer separado.
+- (mulheres*100)/total
+- código: 
+
+let sexo, filme, contMulheres = 0, contFilmes = 0
+        for(i=0; i<50; i++){
+            sexo = Math.floor(Math.random() * 2)
+            filme = Math.floor(Math.random() * 23)
+            
+            if(sexo == 1)//1 - feminino
+                contMulheres++
+            if(filme > 10)
+                contFilmes++
+        }
+percMulheres = contMulheres*100/50
+        
+        console.log('Questão 4\nQtd de mulheres: ' + contMulheres
+        +'\nQtd de pessoas assistiram mais que 10 filmes: ' +contFilmes
+        +'\nPercentual de mulheres: '+percMulheres+'%')
+
+*/
+    </script>
+</body>
+</html>

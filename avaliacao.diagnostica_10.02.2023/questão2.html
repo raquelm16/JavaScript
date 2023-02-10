@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//MINHA PROVA
+        var sal = 3000
+
+if (sal<=2000) {
+    var newsal1 = (0.15*sal)+sal
+    var valor1 = newsal1-sal
+    console.log("Novo salário: ",newsal1,"\nValor reajustado: ",valor1,"\nÍndice reajustado: 15%");
+} else if (sal<=4000) {
+    var newsal2 = (0.12*sal)+sal
+    var valor2 = newsal2-sal
+    console.log("Novo salário: ",newsal2,"\nValor reajustado: ",valor2,"\nÍndice reajustado: 12%")
+} else {
+    var newsal3 = (0.10*sal)+sal
+    var valor3 = newsal3-sal
+    console.log("Novo salário: ",newsal3,"\nValor reajustado: ",valor3,"\nÍndice reajustado: 10%")
+}
+
+//PROVA CORRIGIDA
+/*
+- o if tá retornando um valor booleano (true/false);
+- se colocar if ao invés de else, mesmo o salário sendo
+1000, ele compara em todos os 3.
+- posso fazer meu console fora dos ifs. Assim também não
+preciso ficar repetindo o 'var newsal', nem o 'var valor'.
+- não tá errado, só que economiza linha de código.
+- outro modo de fazer:
+
+ let salario = 3000, reajuste, novoSalario, indiceReajustado
+        if (salario <= 2000){
+            reajuste = salario * 0.15
+            indiceReajustado = 15
+        }       
+        else if (salario <= 4000){
+            reajuste = salario * 0.12
+            indiceReajustado = 12 
+        }   
+        else{
+            reajuste = salario * 0.10
+            indiceReajustado = 10
+        }
+novoSalario = salario + reajuste
+        console.log('Questão 2\nNovo Salário: R$'+novoSalario
+        +'\nValor Reajustado: R$'+reajuste
+        +'\nÍndice Reajustado:'+indiceReajustado+'%')
+
+*/
+    </script>
+</body>
+</html>

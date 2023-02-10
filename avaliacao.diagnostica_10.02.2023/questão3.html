@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//MINHA PROVA
+        var base = 50
+
+var curso = prompt("Deseja participar dos nossos mini cursos? Digite S ou N.");
+var trad = prompt("Deseja ter tradução simultânea? Digite S ou N.");
+
+if (curso=='S' & trad=='S') {
+    console.log("Valor da inscrição: ", base+20+10)
+} else if (curso=='S' & trad=='N') {
+    console.log("Valor da inscrição: ", base+20)
+}  else if (curso=='N'& trad=='S') {
+    console.log("Valor da inscrição: ", base+10)
+} else {
+    console.log("Valor da inscrição: ", base)
+}
+
+//PROVA CORRIGIDA
+/*
+- usar let
+- outro modo de fazer:
+
+let base = 50, minicurso = 's', traducao = 's'
+
+        if(minicurso == 's')
+            base += 20
+        if(traducao == 's')
+            base += 10
+
+        console.log('Questão 3\nValor da Inscrição: R$'+base)
+
+*/
+    </script>
+</body>
+</html>

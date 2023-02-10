@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//MINHA PROVA
+        var na
+
+        for(i=0;i<11;i++){
+            var n1 = prompt("Qual a nota 1?");
+            var n2 = prompt("Qual a nota 2?");
+
+            if(n1=='10' & n2=='10'){
+                na = i+1
+            } 
+
+            console.log("Alunos com conceito A: "+na+"\nMédia geral da turma: ")
+        }
+
+//PROVA CORRIGIDA
+/*
+- tem que usar array
+- conforme o i vai mudando de núm. ele vai puxando as notas
+que estão nessa posição
+- código:
+
+ let nota1 = [7.0,7.0,5.5,6.0,6.0,7.0,9.0,6.8,6.5,6.0]
+        let nota2 = [7.5,8.0,6.0,6.0,6.5,6.0,8.0,7.2,7.5,8.0]
+        let medias = []
+        let contConceitoA = 0, somaMedias = 0
+        for(i=0; i<10; i++){
+            medias[i] = (nota1[i]+nota2[i])/2
+
+            if(medias[i] > 9) contConceitoA++
+            
+            somaMedias+= medias[i]            
+        }
+        let mediaGeral = somaMedias/medias.length
+        console.log('Questão 5\nQuantidade de alunos conceito A:'+contConceitoA
+        +'\nMédia geral da turma:'+mediaGeral)
+
+*/
+    </script>
+</body>
+</html>
