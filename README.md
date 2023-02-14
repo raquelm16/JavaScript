@@ -9,7 +9,7 @@
 <li> Estrutura de Decisão (04/10/2022 - 3º tri)
 <li> Estrutura de Repetição (25/10/2022 - 3º tri)<br>
 . . .
-<li> Avaliação Diagnóstica (1º tri)
+<li> Avaliação Diagnóstica (10/02/2023 - 1º tri)
 <br>
 <br>
 <p align="center">Provas do Senai</p>
