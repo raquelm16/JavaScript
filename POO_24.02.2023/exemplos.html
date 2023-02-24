@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos</title>
+</head>
+<body>
+    
+<script>
+    //ACESSO AO ATRIBUTO - FORMA 1
+// criar obj basso
+//Pertence a Classe Estudante
+let basso = {
+    //atributos
+    nome: 'David Basso', //atributos
+    matricula: 123456,
+    notas:[9,10,10], //array
+    sairFerias: function(){ //método, ação que ele realiza
+        console.log('Irumm irumm')
+    },
+
+}
+console.log('O nome do estudante é '+basso.nome);
+console.log(basso.matricula);
+console.log(basso.notas[1]);
+basso.sairFerias()// executa a "ação"
+
+//ACESSO AO ATRIBUTO - FORMA 2
+//console.log(basso['nome'])
+
+
+
+
+</script>
+
+</body>
+</html>
