@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Produtos</title>
+    <style>
+        body{
+            margin: 15;
+            font-family: Verdana;
+        }
+        header{
+            background-color:rgb(67, 146, 142);
+            padding: 20px;
+        }
+        header > h2{
+            color:rgb(30, 59, 59);
+            text-align: center;
+        }
+        .container{
+            border: 2px solid rgb(120, 177, 35);
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 16px;
+            padding: 16px;
+            width: 70%;
+        }
+        footer{
+            background-color:rgb(69, 133, 133);
+            color:aliceblue;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Seleção de Produtos</h2>
+    </header>
+    <div class="container">
+        <h4>Lista de produtos</h4>
+        <p>Selecione um produto:
+        <select id="produtos">
+            <option value="Hamburguer I">Hamburguer I</option>
+            <option value="Hamburguer II">Hamburguer II</option>
+            <option value="Hamburguer III">Hamburguer III</option>
+            <option value="Pizza I">Pizza I</option>
+            <option value="Pizza II">Pizza II</option>
+        </select>
+    </p>
+    </div>
+
+
+    <script>
+        let select = document.querySelector("#produtos")
+        select.addEventListener("change", setProduto)
+
+
+        function setProduto(){
+            if(select.value == "Hamburguer I"){
+                alert("Valor é R$35,00")
+            } else if(select.value == "Hamburguer II"){
+                alert("Valor é R$45,00")
+            } else if(select.value == "Hamburguer III"){
+                alert("Valor é R$49,00")
+            } else if(select.value == "Pizza I"){
+                alert("Valor é R$50,00")
+            } else if(select.value == "Pizza II"){
+                alert("Valor é R$56,00")
+            } else {
+                alert("Valor é R$59,00")}
+            }
+
+//soma.js
+      // Criar tres variaveis para armazenar os numeros
+let nota1, nota2, nota3, conta
+
+
+    // O usuario deve digitar as três notas e somar
+    nota1 = Number(prompt(' digite a nota1'))
+    nota2 = Number(prompt(' digite a nota2'))
+    nota3 = Number(prompt(' digite a nota3'))
+
+
+    // Faz uma conta
+    conta = ((nota1 + nota2 + (nota3 * 3) / 5))
+
+
+// Mostrar resultado da conta na tela
+alert(`O resultado eh ${conta.toFixed(3)}. Fodaaa`)
+    </script>
+
+
+
+
+    <footer>
+        <ul>
+            <li>Mercadinho do SENAI</li>
+            <li>Compre tudo com menor preço</li>
+        </ul>
+    </footer>
+</body>
+</html>
